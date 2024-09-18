@@ -1,7 +1,7 @@
 import mongoose, {Schema} from "mongoose";
 import jwt from "jsonwebtoken"
 import bcrypt from "bcrypt"
-
+//mongoose-aggreagate-paginate-v2
 const userSchema = new Schema(
     {
         username: {
@@ -48,7 +48,7 @@ const userSchema = new Schema(
 
     },
     {
-        timestamps: true
+        timestamps: true //createdAt and updatedAt
     }
 )
 
@@ -90,4 +90,4 @@ userSchema.methods.generateRefreshToken = function(){
     )
 }
 
-export const User = mongoose.model("User", userSchema)
+export const User = mongoose.model("User", userSchema) //mongoDB converts the "Users" to users that is in plural form jst bcoz of standard practices and generalization
